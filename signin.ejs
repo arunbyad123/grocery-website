@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #008000;
+            margin: 0;
+            padding: 0;
+            background-image: url('grocery_background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            color: #008000;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #008000;
+            border-radius: 10px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            position: relative;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #008000; /* Green border */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #008000; /* Green submit button */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        input[type="submit"]:hover {
+            background-color: #006400; /* Dark green hover color */
+        }
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            border-color: #006400; /* Dark green border on hover */
+        } a {
+            color: #008000;
+            text-decoration: none;
+        } a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <form action="/login" method="post">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+            <p style="color: black;">Don't have an account? <a href="/signup">Sign Up</a></p>
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+</html>

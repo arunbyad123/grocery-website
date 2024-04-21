@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #008000;
+            margin: 0;
+            padding: 0;
+            background-image: url('grocery_background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            color: #008000;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #008000;
+            border-radius: 10px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #008000;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #006400;
+        }
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            border-color: #006400;
+        } a {
+            color: #008000;
+            text-decoration: none;
+        } a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="/sign_up" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+            <p style="color: black;">Already have an account? <a href="/signin">Sign In</a></p>
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+</html>
