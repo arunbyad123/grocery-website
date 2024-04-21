@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta  charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bdy">
+<header class="header">
+    <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> Arun's</a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#productheading">products</a>
+        <a href="#categoryheading">category</a>
+        <a href="#reviewheading">review</a>
+    </nav>
+    <div class="icons">
+        <div class="fa-solid fa-bars"  id="menu-btn"></div>
+        <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
+        <div class="fa-solid fa-cart-shopping" id="cart-btn"></div>
+        <div id="login-btn"><a href="/signin"><i class="fa-solid fa-right-from-bracket" style="color: red;"></i></a></div>  
+    </div>
+    <form action="/home" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="shopping-cart">
+            <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="mango.png" style="height: 100px; width: 100px;" alt="">
+            <div class="content">
+            <h3>Mango</h3>
+            <span class="price">500/-</span>
+            <span class="quantity">qty : 10</span>
+            </div>
+            </div>
+                <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tomato.png" style="height: 100px; width: 100px;" alt="">
+                <div class="content">
+                <h3>Tomato</h3>
+                <span class="price">90/-</span>
+                <span class="quantity">qty : 3kg</span>
+                </div>
+                </div>
+                <div class="total">total : 590/- </div>
+                <a href="#" class="btn">Checkout</a>
+                </div>
+</header>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://th.bing.com/th/id/R.e1ada089917178dd40aede935a20ca5b?rik=yKZSLSI%2fkS6wFw&riu=http%3a%2f%2fwww.batterypark.tv%2fwp-content%2fuploads%2f2015%2f05%2fLe-District-grocery-store-13.jpg&ehk=JmGV%2fb70ykWddxIyVu6KlQF5dsvlP4VrrWeYWlLWpDo%3d&risl=&pid=ImgRaw&r=0" style="width:100%; filter: brightness(50%)">
+      <div class="centered" style="position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); color: white; font-size: 40px; font-weight: bolder;">Freshness Delivered, Convenience Guaranteed!</div>
+      <button style="position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: green;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;">Shop Now</button>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmVnZXRhYmxlJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D" style="filter: brightness(50%); width:100%; height: 600px;">
+      <div class="centered" style="position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); color: white; font-size: 40px; font-weight: bolder;">From Farm to Table, We Bring Freshness to You!</div>
+      <button style="position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: green;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;">Grab Now</button>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://c4.wallpaperflare.com/wallpaper/301/832/32/cans-coca-cola-soda-wallpaper-preview.jpg" style="width:100%; height: 600px; filter: brightness(50%);">
+      <div class="centered" style="position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); color: white; font-size: 40px; font-weight: bolder;">Quench Your Thirst, Spark Joy with Every Sip!</div>
+      <button style="position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: green;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;">Drink Now</button>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+<br>
+<h5 style="font-size: 40px; margin-left: 25px;" id="productheading" class="texticon"><i class="fa-solid fa-fire"></i> Popular Products</h5>
+<br>
+    <div class="image-container" >
+        <div class="image-card">
+          <img src="jeera.png" alt="Image 1">
+          <div class="overlay">29% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Jeera</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>1 kg</option>
+                <option>2 kg</option>
+                <option>3 kg</option>
+                <option>4 kg</option>
+                <option>5 kg</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹1200/kg</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="add" class="addbtn">
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="mustard.png" alt="Image 2">
+          <div class="overlay">8% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Mustard</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>1 kg</option>
+                <option>2 kg</option>
+                <option>3 kg</option>
+                <option>4 kg</option>
+                <option>5 kg</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹280/kg</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="Add" class="addbtn">
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="coke.png" alt="Image 3">
+          <div class="overlay">17% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Coke</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>300 ML</option>
+                <option>500 ML</option>
+                <option>1 L</option>
+                <option>2 L</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹65/ltr</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="add" class="addbtn">
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="tomato.png" alt="Image 3">
+          <div class="overlay">23% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Tomatos</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>1 kg</option>
+                <option>2 kg</option>
+                <option>3 kg</option>
+                <option>4 kg</option>
+                <option>5 kg</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹30/kg</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="add" class="addbtn">
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="mango.png" alt="Image 3">
+          <div class="overlay">31% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Mangoes</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>1 kg</option>
+                <option>2 kg</option>
+                <option>3 kg</option>
+                <option>4 kg</option>
+                <option>5 kg</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹50/peice</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="add" class="addbtn">
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="milk.jpg" alt="Image 3">
+          <div class="overlay">50% OFF</div>
+          <div class="imgdisc">
+            <br>
+            <h1>Milk</h1>
+            <br>
+            <br>
+              <div class="weightselect">
+                <select class="selectkg">
+                <option>100 ML</option>
+                <option>250 ML</option>
+                <option>500 ML</option>
+                <option>1 L</option>
+              </select>
+              <br>
+              <br>
+              <h4>₹54/ltr</h4>
+              </div>
+          </div>
+          <br>
+          <div class="imgwishadd">
+            <div class="fa-regular fa-heart"></div>
+            <input type="submit" value="add" class="addbtn">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h5 style="font-size: 40px; margin-left: 25px;" id="categoryheading" class="texticon"><i class="fa-solid fa-layer-group"></i> Shop By Category</h5>
+      <br>
+      <br>
+      <div class="category-images">
+        <div class="image-category">
+          <img src="vegetables.png" alt="Image 1">
+          </div>
+          <div class="image-category">
+          <img src="beverages.png" alt="Image 1">
+          </div>
+          <div class="image-category">
+            <img src="fruits.png" alt="Image 1">
+            </div>
+          <div class="image-category">
+            <img src="dairy.png" alt="Image 1">
+            </div>
+        </div>
+        <br>
+      <div class="categorydisc">
+        <p>Vegatables</p>
+        <p style="margin-left: 90px;">Beverages</p>
+        <p style="margin-left: 100px;">Fruits  </p>
+        <p style="margin-left: 150px;">Dairy</p>
+      </div>
+      <br>
+      <br>
+      <h5 style="font-size: 40px; margin-left: 25px;" id="reviewheading" class="texticon"><i class="fa-solid fa-pencil"></i> Reviews</h5>
+      <br>
+      <br>
+      <center><h4 style="font-size: 20px;" id="reviewheading">Reviewed By Our Customers</h4></center>
+      <br>
+      <br>
+      <div class="reviewSection">
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="user.png" alt="">
+                        <span><a href="">Lakshmi</a></span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                  <h2>Freshness Guaranteed!</h2><br>
+                    <p class="review">"I've been shopping at this grocery website for months now, and I'm always impressed by the freshness of their produce. Whether it's crisp vegetables or juicy fruits, everything arrives in top condition. Plus, their delivery is prompt and the packaging ensures that delicate items are well-protected. Highly recommended for anyone who values quality and convenience!"</p>
+                        <br>
+                    <h1>Jan 01, 2023</h1>
+                </article>
+            </div>
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="usermale.png" alt="">
+                        <span><a href="">Kalyan</a></span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                  <h2>Extensive Selection, Excellent Service</h2>
+                    <p class="review">What I love most about this grocery website is the vast selection they offer. From everyday essentials to specialty items, they have everything I need. The user-friendly interface makes it easy to navigate through categories and find exactly what I'm looking for. Moreover, their customer service is top-notch – responsive, helpful, and always ready to assist with any inquiries or concerns</p>
+                        <br>
+                    <h1>Feb 01, 2024</h1>
+            </div>
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="usermale.png" alt="">
+                        <span><a href="">Raju</a></span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star-half"></i></li>
+                    </ul>
+                </div>
+                <article>
+                  <h2>Convenient and Cost-Effective</h2><br>
+                    <p class="review">As a busy professional, I rely heavily on online grocery shopping to save time, and this website has become my go-to choice. Not only do they offer competitive prices, but their frequent discounts and deals help me save even more. The convenience of ordering from my phone or laptop and having groceries delivered right to my doorstep is invaluable. Plus, the quality of their products is consistently high. It's a win-win situation for me!</p>
+                        <br>
+                    <h1>Aug 21, 2023</h1>
+                </article>
+            </div>
+        </div>
+        <br>
+        <br>
+      <div id="i" class="scrollup">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+      <div class="footer">
+        <div class="newsletter">
+          <br><br>
+          <h6>About Us</h6>
+          <br>
+          <br>
+          <p style="font-weight: bold; width: 200px; font-size: 12px;">we're passionate about providing fresh, quality groceries right to your door. With a wide selection of products ranging from farm-fresh produce to pantry staples</p><br>
+          <br>
+          <p>© 2024 Pavan's All rights reserved</p>
+        </div>
+        <div class="quicklinks">
+          <br>
+          <br>
+          <h6>Quick Links</h6>
+          <br>
+          <br>
+          <a href="#">Home</a><br><br>
+          <a href="#productheading">Products</a><br><br>
+          <a href="#categoryheading">Category</a><br><br>
+          <a href="#reviewheading">Review</a><br><br>
+        </div>
+        <div class="adress">
+          <br>
+          <br>
+          <h6>Reach Us</h6>
+          <br><br>
+          <i class="fa-solid fa-phone" style="font-size: 20px;"></i><span style="font-size: 15px; margin-left: 10px;">8978987389</span>
+          <br>
+          <br>
+          <i class="fa-solid fa-envelope" style="font-size: 20px;"></i><span style="font-size: 15px; margin-left: 10px;">yuvarajpoduri15@gmail.com</span>
+      </div>
+      <div class="socialmedia">
+        <h6>Follow Us</h6>
+        <br>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </div>
+        <script src="script.js"></script>
+    </body>
+</html>
